@@ -253,6 +253,10 @@ input, textarea, select {
   transition: border-color 0.2s;
 }
 
+textarea {
+  resize: vertical;
+}
+
 input:focus, textarea:focus, select:focus {
   outline: none;
   border-color: #2563eb;
