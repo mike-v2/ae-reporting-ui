@@ -1,23 +1,31 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-
-const message = ref('Loading...')
-
-onMounted(async () => {
-  try {
-    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/hello`)
-    const data = await response.json()
-    message.value = data.text
-  } catch (error) {
-    console.error("Error connecting to backend:", error)
-    message.value = 'Failed to connect to backend'
-  }
-})
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <main style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; font-family: sans-serif;">
-    <h1>Hello World Vue + .NET</h1>
-    <p>Message from Database: <strong>{{ message }}</strong></p>
-  </main>
+  <div id="app-container">
+    <RouterView />
+  </div>
 </template>
+
+<style>
+/* Global resets and base styles */
+:root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+  color: #0f172a;
+  background-color: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#app-container {
+  min-height: 100vh;
+}
+</style>
