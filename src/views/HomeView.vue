@@ -15,7 +15,7 @@
 
 <style scoped>
 .home-container {
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 4rem 2rem;
   text-align: center;
@@ -26,8 +26,10 @@
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 800;
+  line-height: 1.2;
+  padding: 0.1em 0;
   background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
